@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>    
+<head>
     <meta charset="UTF-8" />
     <title>Kaala vishleshana</title>
     <style>
@@ -10,8 +10,8 @@
             background-size: contain;
             background-position: center;
 
-            
-            
+
+
         }
 
         .tt {
@@ -22,10 +22,62 @@
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.125);
         }
+
+        /* styles.css */
+        /* body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        } */
+
+        #countdown-container {
+            width: 95vw;
+            /* Use a percentage of the viewport width */
+            max-width: 1920px;
+            /* Maximum width for larger screens */
+            background-color: #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+        }
+
+        #progress-bar {
+            height: 30px;
+            background-color: #4caf50;
+            width: 100%;
+            /* Full width of the container */
+            transition: width 0.5s ease-in-out;
+        }
+
+        #time-left {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
+    <div id="countdown-container">
+        <div id="progress-bar"></div>
+        <div id="time-left"></div>
+    </div>
+
+    <script src="script.js"></script>
+    
+
+
     <div class="tt">
         <br>04:24 - 04:48 Dhyaanam
         <br>
@@ -35,7 +87,7 @@
         <br>05:36 - 06:00 Snaanam + Sandhyaavandanam
         <br>06:00 - 06:24 Intlo pani
         <br>06:24 - 06:48 Arthaartham vyaapara chintanam
-        <br>06:48 - 07:12 Praatah kaala  bhojanam
+        <br>06:48 - 07:12 Praatah kaala bhojanam
         <br>
         <br>07:12 - 07-36
         <br>07-36 - 08:00
@@ -105,4 +157,5 @@
         <br>04:00 - 04:24
     </div>
 </body>
+
 </html>
