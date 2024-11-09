@@ -1,0 +1,74 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
+    position: relative;
+}
+
+/* The .background element which holds the background image */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Arjuna.jpg'); /* Replace with your image path */
+    background-size: cover;  /* Make the image cover the entire viewport */
+    background-position: center;  /* Center the image */
+    background-attachment: fixed;  /* Fix the background when scrolling */
+    z-index: -1;  /* Make sure the background stays behind the content */
+}
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Arjuna.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);  /* Temporary dark background for visibility */
+}
+
+
+/* Content Styling */
+.content {
+    height: 2000px; /* Make the page long to allow scrolling */
+    text-align: center;
+    color: white;
+    padding: 100px;
+    position: relative;
+    z-index: 1; /* Bring the content above the background */
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .background {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 769px) {
+    .background {
+        background-size: 100% 56.25%;  /* 16:9 aspect ratio */
+        background-position: center top; /* Focus on the top part of the image */
+    }
+}
